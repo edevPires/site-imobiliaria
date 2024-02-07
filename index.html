@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/f2caee6960.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Tailwind Header</title>
+  </head>
+
+  <style>
+    /* fixed widths */
+    .w-400 {
+      width: 400px;
+    }
+
+    @media (max-width: 639px) {
+      /* Estilos para telas com largura menor que 400 pixels */
+      .w-400 {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <body class="bg-slate-200">
+    <!-- HEADER -->
+    <header
+      class="fixed z-10 bg-white w-full h-24 shadow-md flex justify-between px-10 text-slate-700"
+    >
+      <ul class="h-full flex items-center w-fit overflow-hidden">
+        <img
+          class="h-20 w-auto"
+          src="https://seeklogo.com/images/C/corporate-company-logo-749CEE6ADC-seeklogo.com.png"
+          alt="logo"
+        />
+      </ul>
+      <ul class="md:h-full md:w-fit md:flex md:items-center hidden">
+        <li
+          class="group p-5 flex h-full itens-center font-bold text-xl hover:cursor-pointer"
+        >
+          <span class="flex items-center">
+            <p
+              class="relative after:hidden after:absolute after:content-[''] after:w-full after:h-0.5 after:bg-blue-600 after:right-1/2 after:transform after:translate-x-1/2 after:bottom-0 after:transform transition-transform duration-100 after:translate-y-[10px] after:group-hover:flex after:group-hover:translate-y-[0px]"
+            >
+              HOME
+            </p>
+          </span>
+        </li>
+        <li
+          class="group p-5 flex h-full itens-center font-bold text-xl hover:cursor-pointer"
+        >
+          <span class="flex items-center">
+            <p
+              class="relative after:hidden after:absolute after:content-[''] after:w-full after:h-0.5 after:bg-blue-600 after:right-1/2 after:transform after:translate-x-1/2 after:bottom-0 after:group-hover:flex"
+            >
+              BLOG
+            </p>
+          </span>
+        </li>
+        <li
+          class="group p-5 flex h-full itens-center font-bold text-xl hover:cursor-pointer"
+        >
+          <span class="flex items-center">
+            <p
+              class="relative after:hidden after:absolute after:content-[''] after:w-full after:h-0.5 after:bg-blue-600 after:right-1/2 after:transform after:translate-x-1/2 after:bottom-0 after:group-hover:flex"
+            >
+              MORE
+            </p>
+          </span>
+        </li>
+        <li
+          class="group p-5 flex h-full itens-center font-bold text-xl hover:cursor-pointer"
+        >
+          <span class="flex items-center">
+            <p
+              class="relative after:hidden after:absolute after:content-[''] after:w-full after:h-0.5 after:bg-blue-600 after:right-1/2 after:transform after:translate-x-1/2 after:bottom-0 after:group-hover:flex"
+            >
+              CONTACT US
+            </p>
+          </span>
+        </li>
+        <li
+          class="group p-5 flex h-full itens-center font-bold text-xl hover:cursor-pointer"
+        >
+          <span class="flex items-center">
+            <p
+              class="relative after:hidden after:absolute after:content-[''] after:w-full after:h-0.5 after:bg-blue-600 after:right-1/2 after:transform after:translate-x-1/2 after:bottom-0 after:group-hover:flex"
+            >
+              ABOUT
+            </p>
+          </span>
+        </li>
+      </ul>
+
+      <!-- HAMBURGUER MENU -->
+      <ul class="flex items-center md:hidden hover:cursor-pointer">
+        <i class="fa-solid fa-bars fa-2x" id="menu"></i>
+      </ul>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- SIDEBAR BACKGROUND -->
+    <div
+      class="fixed z-20 w-screen h-screen bg-black transition transition-opacity duration-500 hidden"
+      id="sidebarBg"
+    ></div>
+    <!-- SIDEBAR BACKGROUND END -->
+
+    <!-- SIDEBAR -->
+    <div
+      class="fixed z-30 right-0 h-screen w-400 bg-white transform transition-transform duration-500 translate-x-[400px] shadow-xl hidden"
+      id="sidebar"
+    >
+      <div class="absolute right-0 my-8 mr-10 cursor-pointer">
+        <i class="fa-solid fa-xmark fa-2x" id="sidebarClose"></i>
+      </div>
+
+      <div class="flex justify-center">
+        <img
+          src="https://seeklogo.com/images/C/corporate-company-logo-749CEE6ADC-seeklogo.com.png"
+          alt="logo"
+          class="h-32 w-auto my-5"
+        />
+      </div>
+
+      <ul class="h-fit flex flex-wrap">
+        <li class="w-full px-2">
+          <span
+            class="py-5 w-full flex justify-center font-bold text-2xl transition-colors duration-300 hover:bg-blue-500 hover:text-white hover:cursor-pointer rounded-xl"
+          >
+            <p>HOME</p>
+          </span>
+        </li>
+
+        <li class="w-full px-2">
+          <span
+            class="py-5 w-full flex justify-center font-bold text-2xl transition-colors duration-300 hover:bg-blue-500 hover:text-white hover:cursor-pointer rounded-xl"
+          >
+            <p>BLOG</p>
+          </span>
+        </li>
+
+        <li class="w-full px-2">
+          <span
+            class="py-5 w-full flex justify-center font-bold text-2xl transition-colors duration-300 hover:bg-blue-500 hover:text-white hover:cursor-pointer rounded-xl"
+          >
+            <p>MORE</p>
+          </span>
+        </li>
+
+        <li class="w-full px-2">
+          <span
+            class="py-5 w-full flex justify-center font-bold text-2xl transition-colors duration-300 hover:bg-blue-500 hover:text-white hover:cursor-pointer rounded-xl"
+          >
+            <p>CONTACT US</p>
+          </span>
+        </li>
+
+        <li class="w-full px-2">
+          <span
+            class="py-5 w-full flex justify-center font-bold text-2xl transition-colors duration-300 hover:bg-blue-500 hover:text-white hover:cursor-pointer rounded-xl"
+          >
+            <p>ABOUT</p>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <!-- SIDEBAR END -->
+    <main class="pt-24 px-[20px] sm:px-[50px] md:px-[70px]">
+      <div class="py-[20px]">
+        <h1 class="text-4xl font-bold">Catálogo:</h1>
+      </div>
+      <div class="flex flex-wrap flex-col w-full h-fit">
+        <ul
+          class="grid grid-rows-6 grid-cols-1 sm:grid-rows-3 sm:grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 w-full h-fit gap-[10px] py-[5px] gap-y-[20px]"
+        >
+          <li class="bg-white rounded-xl p-3">
+            <div
+              class="w-full bg-slate-900 h-[300px] rounded-xl bg-cover bg-center"
+              style="
+                background-image: url(https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FzYXxlbnwwfHwwfHx8MA%3D%3D);
+              "
+            ></div>
+            <div class="flex flex-wrap py-5">
+              <div class="flex justify-between w-full py-3">
+                <h1 class="text-2xl font-bold">Casa 1</h1>
+                <p>⭐⭐⭐⭐⭐</p>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A ex
+                  autem aliquid provident nesciunt fuga harum minus ipsum
+                  dolorum voluptate eveniet ipsa, voluptas architecto magni
+                  nihil repellendus voluptatum quos consequatur!
+                </p>
+              </div>
+              <div class="flex justify-center items-center w-full mt-5">
+                <button
+                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                >
+                  Saiba Mais
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="bg-white rounded-xl p-3">
+            <div
+              class="w-full bg-slate-900 h-[300px] rounded-xl bg-cover bg-center"
+              style="
+                background-image: url(https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FzYXxlbnwwfHwwfHx8MA%3D%3D);
+              "
+            ></div>
+            <div class="flex flex-wrap py-5">
+              <div class="flex justify-between w-full py-3">
+                <h1 class="text-2xl font-bold">Casa 2</h1>
+                <p>⭐⭐⭐⭐</p>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A ex
+                  autem aliquid provident nesciunt fuga harum minus ipsum
+                  dolorum voluptate eveniet ipsa, voluptas architecto magni
+                  nihil repellendus voluptatum quos consequatur!
+                </p>
+              </div>
+              <div class="flex justify-center items-center w-full mt-5">
+                <button
+                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                >
+                  Saiba Mais
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="bg-white rounded-xl p-3">
+            <div
+              class="w-full bg-slate-900 h-[300px] rounded-xl bg-cover bg-center"
+              style="
+                background-image: url(https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhc2F8ZW58MHx8MHx8fDA%3D);
+              "
+            ></div>
+            <div class="flex flex-wrap py-5">
+              <div class="flex justify-between w-full py-3">
+                <h1 class="text-2xl font-bold">Casa 3</h1>
+                <p>⭐⭐⭐</p>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A ex
+                  autem aliquid provident nesciunt fuga harum minus ipsum
+                  dolorum voluptate eveniet ipsa, voluptas architecto magni
+                  nihil repellendus voluptatum quos consequatur!
+                </p>
+              </div>
+              <div class="flex justify-center items-center w-full mt-5">
+                <button
+                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                >
+                  Saiba Mais
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="bg-white rounded-xl p-3">
+            <div
+              class="w-full bg-slate-900 h-[300px] rounded-xl bg-cover bg-center"
+              style="
+                background-image: url(https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+              "
+            ></div>
+            <div class="flex flex-wrap py-5">
+              <div class="flex justify-between w-full py-3">
+                <h1 class="text-2xl font-bold">Casa 4</h1>
+                <p>⭐⭐⭐</p>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A ex
+                  autem aliquid provident nesciunt fuga harum minus ipsum
+                  dolorum voluptate eveniet ipsa, voluptas architecto magni
+                  nihil repellendus voluptatum quos consequatur!
+                </p>
+              </div>
+              <div class="flex justify-center items-center w-full mt-5">
+                <button
+                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                >
+                  Saiba Mais
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="bg-white rounded-xl p-3">
+            <div
+              class="w-full bg-slate-900 h-[300px] rounded-xl bg-cover bg-center"
+              style="
+                background-image: url(https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?q=80&w=1567&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+              "
+            ></div>
+            <div class="flex flex-wrap py-5">
+              <div class="flex justify-between w-full py-3">
+                <h1 class="text-2xl font-bold">Casa 5</h1>
+                <p>⭐⭐⭐</p>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A ex
+                  autem aliquid provident nesciunt fuga harum minus ipsum
+                  dolorum voluptate eveniet ipsa, voluptas architecto magni
+                  nihil repellendus voluptatum quos consequatur!
+                </p>
+              </div>
+              <div class="flex justify-center items-center w-full mt-5">
+                <button
+                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                >
+                  Saiba Mais
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="bg-white rounded-xl p-3">
+            <div
+              class="w-full bg-slate-900 h-[300px] rounded-xl bg-cover bg-center"
+              style="
+                background-image: url(https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+              "
+            ></div>
+            <div class="flex flex-wrap py-5">
+              <div class="flex justify-between w-full py-3">
+                <h1 class="text-2xl font-bold">Casa 6</h1>
+                <p>⭐⭐⭐</p>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A ex
+                  autem aliquid provident nesciunt fuga harum minus ipsum
+                  dolorum voluptate eveniet ipsa, voluptas architecto magni
+                  nihil repellendus voluptatum quos consequatur!
+                </p>
+              </div>
+              <div class="flex justify-center items-center w-full mt-5">
+                <button
+                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                >
+                  Saiba Mais
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+  </body>
+</html>
