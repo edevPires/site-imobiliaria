@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       src="https://kit.fontawesome.com/f2caee6960.js"
@@ -29,18 +28,14 @@
   <body class="bg-slate-200">
     <!-- HEADER -->
     <header
-      class="fixed z-10 bg-white w-full h-24 shadow-md flex justify-between px-10 text-slate-700"
+      class="fixed z-10 bg-white x-[20px] md:px-[70px] w-full h-24 shadow-md flex justify-between px-10 2xl:h-32 2xl:px-12 text-slate-700"
     >
-      <ul class="h-full flex items-center w-fit overflow-hidden">
-        <img
-          class="h-20 w-auto"
-          src="https://seeklogo.com/images/C/corporate-company-logo-749CEE6ADC-seeklogo.com.png"
-          alt="logo"
-        />
+      <ul class="h-full flex items-center w-fit overflow-hidden py-2">
+        <img class="h-full w-auto" src="/src/static/imgs/logo.png" alt="logo" />
       </ul>
       <ul class="md:h-full md:w-fit md:flex md:items-center hidden">
         <li
-          class="group p-5 flex h-full itens-center font-bold text-xl hover:cursor-pointer"
+          class="group p-5 flex h-full itens-center font-bold text-2xl 2xl:text-3xl hover:cursor-pointer"
         >
           <span class="flex items-center">
             <p
@@ -51,7 +46,7 @@
           </span>
         </li>
         <li
-          class="group p-5 flex h-full itens-center font-bold text-xl hover:cursor-pointer"
+          class="group p-5 flex h-full itens-center font-bold text-2xl 2xl:text-3xl hover:cursor-pointer"
         >
           <span class="flex items-center">
             <p
@@ -62,7 +57,7 @@
           </span>
         </li>
         <li
-          class="group p-5 flex h-full itens-center font-bold text-xl hover:cursor-pointer"
+          class="group p-5 flex h-full itens-center font-bold text-2xl 2xl:text-3xl hover:cursor-pointer"
         >
           <span class="flex items-center">
             <p
@@ -73,7 +68,7 @@
           </span>
         </li>
         <li
-          class="group p-5 flex h-full itens-center font-bold text-xl hover:cursor-pointer"
+          class="group p-5 flex h-full itens-center font-bold text-2xl 2xl:text-3xl hover:cursor-pointer"
         >
           <span class="flex items-center">
             <p
@@ -84,7 +79,7 @@
           </span>
         </li>
         <li
-          class="group p-5 flex h-full itens-center font-bold text-xl hover:cursor-pointer"
+          class="group p-5 flex h-full itens-center font-bold text-2xl 2xl:text-3xl hover:cursor-pointer"
         >
           <span class="flex items-center">
             <p
@@ -105,14 +100,14 @@
 
     <!-- SIDEBAR BACKGROUND -->
     <div
-      class="fixed z-20 w-screen h-screen bg-black transition transition-opacity duration-500 hidden"
+      class="fixed sm:none z-20 w-screen h-screen bg-black transition transition-opacity duration-500 hidden"
       id="sidebarBg"
     ></div>
     <!-- SIDEBAR BACKGROUND END -->
 
     <!-- SIDEBAR -->
     <div
-      class="fixed z-30 right-0 h-screen w-400 bg-white transform transition-transform duration-500 translate-x-[400px] shadow-xl hidden"
+      class="fixed sm:none z-30 right-0 h-screen w-400 bg-white transform transition-transform duration-500 translate-x-[400px] shadow-xl hidden"
       id="sidebar"
     >
       <div class="absolute right-0 my-8 mr-10 cursor-pointer">
@@ -170,11 +165,14 @@
       </ul>
     </div>
     <!-- SIDEBAR END -->
-    <main class="pt-24 px-[20px] sm:px-[50px] md:px-[70px]">
-      <div class="py-[20px]">
-        <h1 class="text-4xl font-bold">Catálogo:</h1>
-      </div>
-      <div class="flex flex-wrap flex-col w-full h-fit">
+    <main
+      class="pt-24 px-[20px] sm:px-[50px] md:px-[70px] flex justify-center flex-wrap"
+    >
+      <!-- CATALOG -->
+      <div class="flex flex-wrap flex-col w-full h-fit max-w-[1536px]">
+        <div class="py-[20px] w-full">
+          <h1 class="text-4xl font-bold">Catálogo:</h1>
+        </div>
         <ul
           class="grid grid-rows-6 grid-cols-1 sm:grid-rows-3 sm:grid-cols-2 lg:grid-rows-1 lg:grid-cols-3 w-full h-fit gap-[10px] py-[5px] gap-y-[20px]"
         >
@@ -354,8 +352,9 @@
           </li>
         </ul>
       </div>
+      <!-- CATALOG END -->
     </main>
     <!-- SCRIPTS -->
-    <script src="script.js"></script>
+    <script src="/src/static/js/script.js"></script>
   </body>
 </html>
