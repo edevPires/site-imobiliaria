@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/src/output.css">
     <script
       src="https://kit.fontawesome.com/f2caee6960.js"
       crossorigin="anonymous"
@@ -198,7 +198,8 @@
               </div>
               <div class="flex justify-center items-center w-full mt-5">
                 <button
-                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                  class="saiba text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full hover:scale-105 transition-all hover:scale-105 transition-all"
+                  id="1"
                 >
                   Saiba Mais
                 </button>
@@ -227,7 +228,8 @@
               </div>
               <div class="flex justify-center items-center w-full mt-5">
                 <button
-                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                  class="saiba text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full hover:scale-105 transition-all"
+                  id="2"
                 >
                   Saiba Mais
                 </button>
@@ -256,7 +258,8 @@
               </div>
               <div class="flex justify-center items-center w-full mt-5">
                 <button
-                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                  class="saiba text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full hover:scale-105 transition-all"
+                  id="3"
                 >
                   Saiba Mais
                 </button>
@@ -285,7 +288,8 @@
               </div>
               <div class="flex justify-center items-center w-full mt-5">
                 <button
-                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                  class="saiba text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full hover:scale-105 transition-all"
+                  id="4"
                 >
                   Saiba Mais
                 </button>
@@ -314,7 +318,8 @@
               </div>
               <div class="flex justify-center items-center w-full mt-5">
                 <button
-                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                  class="saiba text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full hover:scale-105 transition-all"
+                  id="5"
                 >
                   Saiba Mais
                 </button>
@@ -343,7 +348,8 @@
               </div>
               <div class="flex justify-center items-center w-full mt-5">
                 <button
-                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full"
+                  class="saiba text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full hover:scale-105 transition-all hover:scale-110 transition-all"
+                  id="6"
                 >
                   Saiba Mais
                 </button>
@@ -355,6 +361,41 @@
       <!-- CATALOG END -->
     </main>
     <!-- SCRIPTS -->
+    <div class="modal-bg hidden transition-all duration-1000 fixed top-0 z-40 w-dvw h-dvh bg-black opacity-30"></div>
+    <div class="modal hidden fixed top-1/2 left-1/2 sm:w-3/4 sm:h-3/4 -translate-y-1/2 -translate-x-1/2 bg-red z-50 bg-white size-20 rounded-xl flex p-5">
+      <div class="flex h-full flex-grow border-r justify-center items-center">
+        <div
+              class="w-3/4 bg-slate-900  h-[300px] rounded-xl bg-cover bg-center"
+              style="
+                background-image: url(https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+              "
+        ></div>
+      </div>
+      <div class="flex h-full flex-grow max-w-[50%] justify-center items-center">
+        <div class="flex flex-wrap px-5 py-5">
+              <div class="flex justify-between w-full py-3">
+                <h1 class="text-2xl font-bold">Casa 6</h1>
+                <p>⭐⭐⭐</p>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A ex
+                  autem aliquid provident nesciunt fuga harum minus ipsum
+                  dolorum voluptate eveniet ipsa, voluptas architecto magni
+                  nihil repellendus voluptatum quos consequatur!
+                </p>
+              </div>
+              <div class="flex justify-center items-center w-full mt-5">
+                <button
+                  class="text-xl flex justify-center items-center font-bold bg-blue-800 text-white px-6 py-2 rounded-full hover:scale-105 transition-all hover:scale-110 transition-all"
+                >
+                  Saiba Mais
+                </button>
+              </div>
+            </div>
+      </div>
+    </div>
+    <script src="/src/static/js/data.js"></script>
     <script src="/src/static/js/script.js"></script>
   </body>
 </html>
